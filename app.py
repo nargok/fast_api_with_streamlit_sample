@@ -4,7 +4,6 @@ import random
 import requests
 import json
 
-
 page = st.sidebar.selectbox('Choose your page', ['users', 'rooms', 'booking'])
 
 if page == 'users':
