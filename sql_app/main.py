@@ -40,7 +40,7 @@ async def read_bookings(skip: int = 0, limit: int = 100, db: Session = Depends(g
 
 # create
 @app.post('/users', response_model=schemas.User)
-async def create_user(user: schemas.User, db: Session = Depends(get_db)):
+async def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     return crud.create_user(db=db, user=user)
 
 @app.post('/rooms', response_model=schemas.Room)
