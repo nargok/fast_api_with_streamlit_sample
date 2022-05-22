@@ -1,6 +1,7 @@
 import datetime
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
+import json
 
 class Booking(BaseModel):
     booking_id: int
@@ -26,12 +27,12 @@ async def index():
 
 @app.post('/users')
 async def users(users: User):
-    return f'users: {users}'
+    return users
 
 @app.post('/rooms')
 async def rooms(rooms: Room):
-    return f'rooms: {rooms}'
+    return rooms
 
 @app.post('/bookings')
 async def bookings(bookings: Booking):
-    return f'bookings: {bookings}'
+    return bookings
