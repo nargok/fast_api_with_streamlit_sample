@@ -18,6 +18,7 @@ class User(BaseModel):
 class Room(BaseModel):
     room_id: int
     room_name: str = Field(max_length=12)
+    capacity: int
 
 app = FastAPI()
 
