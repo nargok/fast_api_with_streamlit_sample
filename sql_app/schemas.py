@@ -11,6 +11,9 @@ class BookingCreate(BaseModel):
 class Booking(BookingCreate):
     booking_id: int
 
+    class Config:
+        orm_mode = True
+
 class UserCreate(BaseModel):
     username: str = Field(max_length=12)
 

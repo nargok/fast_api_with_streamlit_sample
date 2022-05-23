@@ -36,4 +36,6 @@ def create_booking(db: Session, booking: schemas.Booking):
     db.add(db_booking)
     db.commit()
     db.refresh(db_booking)
+    print('デバッグ')
+    print(db_booking)
     return db_booking
